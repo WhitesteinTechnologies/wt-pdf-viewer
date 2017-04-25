@@ -21,13 +21,13 @@
         <Vaadin-Addon>${project.artifactId}-${project.version}.jar</Vaadin-Addon>
     </properties>
     <scm>
-        <url>https://github.com/your-github-account/wt-pdf-viewer</url>
-        <connection>scm:git:git://github.com/your-github-account/wt-pdf-viewer.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:/your-github-account/wt-pdf-viewer.git</developerConnection>
+        <url>https://github.com/WhitesteinTechnologies/wt-pdf-viewer</url>
+        <connection>scm:git:git://github.com/WhitesteinTechnologies/wt-pdf-viewer.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:/WhitesteinTechnologies/wt-pdf-viewer.git</developerConnection>
     </scm>
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/your-github-account/wt-pdf-viewer/issues</url>
+        <url>https://github.com/WhitesteinTechnologies/wt-pdf-viewer/issues</url>
     </issueManagement>
     <licenses>
         <license>
