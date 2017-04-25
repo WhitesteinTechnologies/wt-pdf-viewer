@@ -1,7 +1,36 @@
 # wt-pdf-viewer
 
-This is a Vaadin add-on project created with in.virit:vaadin-gwt-addon archetype.
-The project supports GWT based extensions for Vaadin.
+Pdf viewer component for vaadin applications. Integrates [pdf.js](https://github.com/mozilla/pdf.js/) web viewer into vaadin.
+
+  
+## Details
+
+The widget runs on client side. It supports:
+* Sidebar with Thumbnails, Document Outline and Attachments.
+* Text search in pdf text.
+* Previous page, next page and jump on arbitrary page.
+* Zooming - zoom down and up by 10%, automatic zoom, actual size, fit page, full width.
+* Full screen presentation Mode.
+* Document print.
+* Document download.
+* Rotation clockwise and counterclockwise.
+* Handtool for comfortable scrolling.
+* Document properties.
+
+Java API:
+````java
+	WTPdfViewer pdfViewer = new WTPdfViewer();
+
+	// basic paging
+	pdfViewer.firstPage();
+	pdfViewer.lastPage();
+	pdfViewer.previousPage();
+	pdfViewer.nextPage();
+	
+	// jump to fifth page	
+	pdfViewer.setPage(5);
+
+````
 
 ## Development instructions 
 
