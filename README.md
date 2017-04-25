@@ -4,7 +4,6 @@ Pdf viewer component for vaadin applications. Integrates [pdf.js](https://github
 
   
 ## Details
-
 The widget runs on client side. It supports:
 * Sidebar with Thumbnails, Document Outline and Attachments.
 * Text search in pdf text.
@@ -17,7 +16,8 @@ The widget runs on client side. It supports:
 * Handtool for comfortable scrolling.
 * Document properties.
 
-Java API:
+## Java API
+Paging: 
 ````java
 	WTPdfViewer pdfViewer = new WTPdfViewer();
 
@@ -29,8 +29,40 @@ Java API:
 	
 	// jump to fifth page	
 	pdfViewer.setPage(5);
-
 ````
+Open new file:
+````java
+	WTPdfViewer pdfViewer = new WTPdfViewer();
+
+    // get file stream
+	String filename = "some-pdf-file.pdf";
+	InputStream dataStream = getClass().getClassLoader().getResourceAsStream(filename);
+	
+	// show file in pdf viewer
+	pdfViewer.setResource(new StreamResource(new InputStreamSource(dataStream), filename));
+	
+	// boilerplate StreamSource implementation
+	class InputStreamSource implements StreamSource {
+
+		private final InputStream data;
+
+		public InputStreamSource(InputStream data) {
+			super();
+			this.data = data;
+		}
+
+		@Override
+		public InputStream getStream() {
+			return data;
+		}
+
+	}
+````
+
+## Printing
+TODO
+
+## Example Project
 
 ## Development instructions 
 
