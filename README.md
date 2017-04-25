@@ -2,9 +2,7 @@
 
 Pdf viewer component for vaadin applications. Integrates [pdf.js](https://github.com/mozilla/pdf.js/) web viewer into vaadin.
 
-  
-## Details
-The widget runs on client side. It supports:
+The widget runs on client side. It features:
 * Sidebar with Thumbnails, Document Outline and Attachments.
 * Text search in pdf text.
 * Previous page, next page and jump on arbitrary page.
@@ -19,44 +17,44 @@ The widget runs on client side. It supports:
 ## Java API
 Paging: 
 ````java
-	WTPdfViewer pdfViewer = new WTPdfViewer();
+WTPdfViewer pdfViewer = new WTPdfViewer();
 
-	// basic paging
-	pdfViewer.firstPage();
-	pdfViewer.lastPage();
-	pdfViewer.previousPage();
-	pdfViewer.nextPage();
-	
-	// jump to fifth page	
-	pdfViewer.setPage(5);
+// basic paging
+pdfViewer.firstPage();
+pdfViewer.lastPage();
+pdfViewer.previousPage();
+pdfViewer.nextPage();
+
+// jump to fifth page	
+pdfViewer.setPage(5);
 ````
 Open new file:
 ````java
-	WTPdfViewer pdfViewer = new WTPdfViewer();
+WTPdfViewer pdfViewer = new WTPdfViewer();
 
-    // get file stream
-	String filename = "some-pdf-file.pdf";
-	InputStream dataStream = getClass().getClassLoader().getResourceAsStream(filename);
-	
-	// show file in pdf viewer
-	pdfViewer.setResource(new StreamResource(new InputStreamSource(dataStream), filename));
-	
-	// boilerplate StreamSource implementation
-	class InputStreamSource implements StreamSource {
+// get file stream
+String filename = "some-pdf-file.pdf";
+InputStream dataStream = getClass().getClassLoader().getResourceAsStream(filename);
 
-		private final InputStream data;
+// show file in pdf viewer
+pdfViewer.setResource(new StreamResource(new InputStreamSource(dataStream), filename));
 
-		public InputStreamSource(InputStream data) {
-			super();
-			this.data = data;
-		}
+// boilerplate StreamSource implementation
+class InputStreamSource implements StreamSource {
 
-		@Override
-		public InputStream getStream() {
-			return data;
-		}
+	private final InputStream data;
 
+	public InputStreamSource(InputStream data) {
+		super();
+		this.data = data;
 	}
+
+	@Override
+	public InputStream getStream() {
+		return data;
+	}
+
+}
 ````
 
 ## Printing
