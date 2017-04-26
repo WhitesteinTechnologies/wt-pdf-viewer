@@ -15,7 +15,7 @@ Pdf viewer component for Vaadin applications based on [pdf.js](https://github.co
 * Document properties
 
 ## Screenshot
-![PDF Viewer with open side meny](/branding/screenshots/01-viewer-with-menu.png?raw=true "Screenshot")
+![PDF Viewer with open side menu](/branding/screenshots/01-viewer-with-menu.png?raw=true "PDF Viewer with open side menu")
 
 ## Printing
 Call the `wtPdfViewerPrintSupport` mixin from top level of your [styles.scss](https://github.com/WhitesteinTechnologies/wt-pdf-viewer-demo/blob/fe80d00e784443f4e975d8fd1dad64b4ff736a40/src/main/webapp/VAADIN/themes/pdfdemotheme/styles.scss) file. It _must_ be called from top level; otherwise printing won't work correctly.
