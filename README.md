@@ -89,7 +89,7 @@ The JavaScript viewer is in `pdf.viewer.js` file. It is a copy of the `build/web
 
 ## Creating Releases
 
-1. Push your changes to e.g. Github.
-2. Update pom.xml to contain proper SCM coordinates (first time only).
-3. Use the Maven release plugin (mvn release:prepare; mvn release:perform).
-4. Upload the generated ZIP file from the target/checkout/target directory to https://vaadin.com/directory service and optionally publish your add-on to Maven central.
+1. Push all changes to Github.
+2. Prepare release: `mvn clean release:prepare -Dusername=<Github Username> -Dpassword=<Github Password>`
+3. Perform release: `mvn clean release:perform -Dusername=<Github Username> -Dpassword=<Github Password>`
+4. Upload the generated ZIP file from the `target/checkout/target` directory to https://vaadin.com/directory service.
