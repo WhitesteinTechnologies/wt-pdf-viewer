@@ -1,19 +1,21 @@
 # wt-pdf-viewer
 
-Pdf viewer component for vaadin applications based on [pdf.js](https://github.com/mozilla/pdf.js/) web viewer. Features:
-* Sidebar with Thumbnails, Document Outline and Attachments.
-* Text search in pdf text.
-* Previous page, next page and jump on arbitrary page.
-* Zooming - zoom down and up by 10%, automatic zoom, actual size, fit page, full width.
-* Full screen presentation Mode.
-* Document print.
-* Document download.
-* Rotation clockwise and counterclockwise.
-* Handtool for comfortable scrolling.
-* Document properties.
+Pdf viewer component for Vaadin applications based on [pdf.js](https://github.com/mozilla/pdf.js/) web viewer.
+
+**Features:**
+* Sidebar with thumbnails, document outline and attachments
+* Text search in PDF text
+* Previous page, next page and jump to arbitrary page
+* Zooming out up to 10%, automatic zoom, zoom to actual size, fit page, full width
+* Full-screen presentation Mode
+* Document print
+* Document download
+* Rotation clockwise and counterclockwise
+* Hand tool for comfortable scrolling
+* Document properties
 
 ## Printing
-Call `wtPdfViewerPrintSupport` mixin from top level of your [styles.scss](https://github.com/WhitesteinTechnologies/wt-pdf-viewer-demo/blob/fe80d00e784443f4e975d8fd1dad64b4ff736a40/src/main/webapp/VAADIN/themes/pdfdemotheme/styles.scss) file. It _must_ be called from top level, printing wont work correctly otherwise.
+Call the `wtPdfViewerPrintSupport` mixin from top level of your [styles.scss](https://github.com/WhitesteinTechnologies/wt-pdf-viewer-demo/blob/fe80d00e784443f4e975d8fd1dad64b4ff736a40/src/main/webapp/VAADIN/themes/pdfdemotheme/styles.scss) file. It _must_ be called from top level; otherwise printing won't work correctly.
 
 ````scss
 @import "pdfdemotheme.scss";
@@ -31,7 +33,7 @@ Call `wtPdfViewerPrintSupport` mixin from top level of your [styles.scss](https:
 
 
 ## Java API
-Create component and show pdf file in it:
+Create component and show a PDF file in it:
 ````java
 WTPdfViewer pdfViewer = new WTPdfViewer();
 
@@ -60,7 +62,7 @@ class InputStreamSource implements StreamSource {
 }
 ````
 
-Change visible page from java code: 
+Change visible page from Java code:
 ````java
 WTPdfViewer pdfViewer = new WTPdfViewer();
 
@@ -75,20 +77,19 @@ pdfViewer.setPage(5);
 ````
 
 ## Demo Project
-Demo project is in [wt-pdf-viewer-demo](https://github.com/WhitesteinTechnologies/wt-pdf-viewer-demo/) repository.
+Demo project is in the [wt-pdf-viewer-demo](https://github.com/WhitesteinTechnologies/wt-pdf-viewer-demo/) repository.
 
-## Development instructions 
-Javascript viewer is in `pdf.viewer.js` file. It is a copy of `build/web/viewer.js` file generated from [wt-vaadin-pdf.js](https://github.com/WhitesteinTechnologies/wt-vaadin-pdf.js) using 'gulp generic' command. 
+## Development Instructions
+The JavaScript viewer is in `pdf.viewer.js` file. It is a copy of the `build/web/viewer.js` file generated from [wt-vaadin-pdf.js](https://github.com/WhitesteinTechnologies/wt-vaadin-pdf.js) using the 'gulp generic' command.
 
-## GWT related stuff
+## GWT-Related Stuff
 
-* To recompile test widgetset, issue *mvn vaadin:compile*, if you think the widgetset changes are not picked up by Vaadin plugin, do a *mvn clean package* or try with parameter *mvn vaadin:compile -Dgwt.compiler.force=true*
-* To use superdevmode, issue "mvn vaadin:run-codeserver" and then just open superdevmode like with any other project
+* To recompile the test widget set, run *mvn vaadin:compile*; if you think the widget-set changes were not picked up by the Vaadin plugin, run *mvn clean package* or try compiling with *mvn vaadin:compile -Dgwt.compiler.force=true*
+* To use superdevmode, run "mvn vaadin:run-codeserver" and open superdevmode like any other project
 
-## Creating releases
+## Creating Releases
 
-1. Push your changes to e.g. Github 
-2. Update pom.xml to contain proper SCM coordinates (first time only)
-3. Use Maven release plugin (mvn release:prepare; mvn release:perform)
-4. Upload the ZIP file generated to target/checkout/target directory to https://vaadin.com/directory service (and/or optionally publish your add-on to Maven central)
-
+1. Push your changes to e.g. Github.
+2. Update pom.xml to contain proper SCM coordinates (first time only).
+3. Use the Maven release plugin (mvn release:prepare; mvn release:perform).
+4. Upload the generated ZIP file from the target/checkout/target directory to https://vaadin.com/directory service and optionally publish your add-on to Maven central.
