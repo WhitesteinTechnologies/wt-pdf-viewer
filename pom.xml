@@ -38,8 +38,8 @@
     </properties>
     <scm>
         <url>https://github.com/WhitesteinTechnologies/wt-pdf-viewer</url>
-        <connection>scm:git:git://github.com/WhitesteinTechnologies/wt-pdf-viewer.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:/WhitesteinTechnologies/wt-pdf-viewer.git</developerConnection>
+        <connection>scm:git:https://github.com/WhitesteinTechnologies/wt-pdf-viewer.git</connection>
+        <developerConnection>scm:git:https://github.com/WhitesteinTechnologies/wt-pdf-viewer.git</developerConnection>
     </scm>
     <issueManagement>
         <system>GitHub</system>
