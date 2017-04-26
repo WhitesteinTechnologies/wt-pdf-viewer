@@ -1,8 +1,6 @@
 # wt-pdf-viewer
 
-Pdf viewer component for vaadin applications. Integrates [pdf.js](https://github.com/mozilla/pdf.js/) web viewer into vaadin.
-
-The widget runs on client side. It features:
+Pdf viewer component for vaadin applications based on [pdf.js](https://github.com/mozilla/pdf.js/) web viewer. Features:
 * Sidebar with Thumbnails, Document Outline and Attachments.
 * Text search in pdf text.
 * Previous page, next page and jump on arbitrary page.
@@ -14,21 +12,26 @@ The widget runs on client side. It features:
 * Handtool for comfortable scrolling.
 * Document properties.
 
-## Java API
-Paging: 
-````java
-WTPdfViewer pdfViewer = new WTPdfViewer();
+## Printing
+Call `wtPdfViewerPrintSupport` mixin from top level of your [styles.scss](https://github.com/WhitesteinTechnologies/wt-pdf-viewer-demo/blob/fe80d00e784443f4e975d8fd1dad64b4ff736a40/src/main/webapp/VAADIN/themes/pdfdemotheme/styles.scss) file. It _must_ be called from top level, printing wont work correctly otherwise.
 
-// basic paging
-pdfViewer.firstPage();
-pdfViewer.lastPage();
-pdfViewer.previousPage();
-pdfViewer.nextPage();
+````scss
+@import "pdfdemotheme.scss";
+@import "addons.scss";
+// add import of pdf viewer styles
+@import "../../../VAADIN/themes/wtpdfviewer/wtpdfviewer.scss";
 
-// jump to fifth page	
-pdfViewer.setPage(5);
+.pdfdemotheme {
+  @include addons;
+  @include pdfdemotheme;
+}
+// add printing styles
+@include wtPdfViewerPrintSupport
 ````
-Open new file:
+
+
+## Java API
+Create component and show pdf file in it:
 ````java
 WTPdfViewer pdfViewer = new WTPdfViewer();
 
@@ -57,10 +60,22 @@ class InputStreamSource implements StreamSource {
 }
 ````
 
-## Printing
-TODO
+Change visible page from java code: 
+````java
+WTPdfViewer pdfViewer = new WTPdfViewer();
 
-## Example Project
+// basic paging
+pdfViewer.firstPage();
+pdfViewer.lastPage();
+pdfViewer.previousPage();
+pdfViewer.nextPage();
+
+// jump to fifth page	
+pdfViewer.setPage(5);
+````
+
+## Demo Project
+Demo project is in [wt-pdf-viewer-demo](https://github.com/WhitesteinTechnologies/wt-pdf-viewer-demo/) repository.
 
 ## Development instructions 
 
