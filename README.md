@@ -13,6 +13,7 @@ Pdf viewer for Vaadin based on [pdf.js](https://github.com/mozilla/pdf.js/) v1.8
 * Rotation clockwise and counterclockwise
 * Hand tool for comfortable scrolling
 * Document properties
+* Can show multiple pdf files on the same screen (e.g. javascripts wont fight)
 
 ## Screenshot
 ![PDF Viewer with open side menu](/branding/screenshots/01-viewer-with-menu.png?raw=true "PDF Viewer with open side menu")
