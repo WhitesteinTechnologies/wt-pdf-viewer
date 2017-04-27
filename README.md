@@ -98,7 +98,9 @@ pdfViewer.setPage(5);
 Demo project is in the [wt-pdf-viewer-demo](https://github.com/WhitesteinTechnologies/wt-pdf-viewer-demo/) repository.
 
 ## Development Instructions
-The JavaScript viewer is in `pdf.viewer.js` file. It is a copy of the `build/web/viewer.js` file generated from [wt-vaadin-pdf.js](https://github.com/WhitesteinTechnologies/wt-vaadin-pdf.js) using the 'gulp generic' command.
+The JavaScript viewer is in `pdf.viewer.js` file. It is a copy of the `build/web/viewer.js` file generated from [wt-vaadin-pdf.js](https://github.com/WhitesteinTechnologies/wt-vaadin-pdf.js) using the 'gulp generic' command. The file is copied as is, do not make changes into it. If you need it to work differently, change [wt-vaadin-pdf.js](https://github.com/WhitesteinTechnologies/wt-vaadin-pdf.js) so that it generates whatever is necessary.
+
+Stylesheet `wtpdfviewer.scss` has minor changes against generated `build/web/viewer.css` - styles are packed into mixins.
 
 ## GWT-Related Stuff
 
