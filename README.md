@@ -1,6 +1,6 @@
 # wt-pdf-viewer
 
-Pdf viewer component for Vaadin applications based on [pdf.js](https://github.com/mozilla/pdf.js/) web viewer.
+Pdf viewer for Vaadin based on [pdf.js](https://github.com/mozilla/pdf.js/) v1.8.188 web viewer.
 
 **Features:**
 * Sidebar with thumbnails, document outline and attachments
@@ -17,7 +17,22 @@ Pdf viewer component for Vaadin applications based on [pdf.js](https://github.co
 ## Screenshot
 ![PDF Viewer with open side menu](/branding/screenshots/01-viewer-with-menu.png?raw=true "PDF Viewer with open side menu")
 
-## Printing
+## Dependency
+WT PDF Viewer is distributed via Vaadin addons maven repository (named directory). Add both dependency and Vaadin addons repository into pom.xml:
+````xml
+<dependency>
+   <groupId>com.whitestein.vaadin.widgets</groupId>
+   <artifactId>wt-pdf-viewer</artifactId>
+   <version>1.0</version>
+</dependency>
+
+<repository>
+   <id>vaadin-addons</id>
+   <url>http://maven.vaadin.com/vaadin-addons</url>
+</repository>
+````
+
+## Enable Printing
 Call the `wtPdfViewerPrintSupport` mixin from top level of your [styles.scss](https://github.com/WhitesteinTechnologies/wt-pdf-viewer-demo/blob/fe80d00e784443f4e975d8fd1dad64b4ff736a40/src/main/webapp/VAADIN/themes/pdfdemotheme/styles.scss) file. It _must_ be called from top level; otherwise printing won't work correctly.
 
 ````scss
