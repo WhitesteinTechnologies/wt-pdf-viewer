@@ -26,10 +26,13 @@ WT PDF Viewer is distributed via Vaadin addons maven repository (named directory
    <version>1.0</version>
 </dependency>
 
-<repository>
-   <id>vaadin-addons</id>
-   <url>http://maven.vaadin.com/vaadin-addons</url>
-</repository>
+<repositories>
+   <!-- Vaadin addons repository -->
+   <repository>
+      <id>vaadin-addons</id>
+      <url>http://maven.vaadin.com/vaadin-addons</url>
+   </repository>
+</repositories>
 ````
 
 ## Enable Printing
