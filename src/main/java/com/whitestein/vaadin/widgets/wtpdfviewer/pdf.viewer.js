@@ -2081,6 +2081,7 @@ function webViewerInitialized() {
   fileInput.id = appConfig.openFileInputName;
   fileInput.className = 'fileInput';
   fileInput.setAttribute('type', 'file');
+  fileInput.setAttribute('hidden', 'true');
   fileInput.oncontextmenu = noContextMenuHandler;
   document.body.appendChild(fileInput);
   if (!window.File || !window.FileReader || !window.FileList || !window.Blob) {
