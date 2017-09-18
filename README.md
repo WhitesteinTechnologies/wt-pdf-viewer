@@ -102,7 +102,19 @@ pdfViewer.setPage(5);
 Demo project is in the [wt-pdf-viewer-demo](https://github.com/WhitesteinTechnologies/wt-pdf-viewer-demo/) repository.
 
 ## Development Instructions
-The JavaScript viewer is in `pdf.viewer.js` file. It is a copy of the `build/web/viewer.js` file generated from [wt-vaadin-pdf.js](https://github.com/WhitesteinTechnologies/wt-vaadin-pdf.js) using the 'gulp generic' command. The file is copied as is, do not make changes into it. If you need it to work differently, change [wt-vaadin-pdf.js](https://github.com/WhitesteinTechnologies/wt-vaadin-pdf.js) so that it generates whatever is necessary.
+The JavaScript viewer is in `pdf.viewer.js` file. The viewer uses `pdf.js` and `pdf.worker.js` files as pdf parsing engine. They are all generated from [wt-vaadin-pdf.js](https://github.com/WhitesteinTechnologies/wt-vaadin-pdf.js). All three files are copied as is, do not make changes into then. If you need them to work differently, change [wt-vaadin-pdf.js](https://github.com/WhitesteinTechnologies/wt-vaadin-pdf.js) so that it generates whatever is necessary. 
+* Use 'gulp generic' command to generate non-minimized files in `build/generic` directory. 
+* Use 'gulp minified-pre' command to generate minimized files in `build/minified` directory. 
+
+Minimized files locations (use this unless you are debugging):
+* viewer: `build/minified/web/viewer.js`,   
+* pdf perser: `build/minified/build/pdf.js`,   
+* worker: `build/minified/build/pdf.worker.js`.   
+
+Non-minimized files locations:
+* viewer: `build/generic/web/viewer.js`,   
+* pdf perser: `build/generic/build/pdf.js`,   
+* worker: `build/generic/build/pdf.worker.js`.   
 
 Stylesheet `wtpdfviewer.scss` has minor changes against generated `build/web/viewer.css` - styles are packed into mixins.
 
