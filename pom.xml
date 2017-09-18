@@ -97,7 +97,7 @@
             </resource>
             <resource>
                 <!-- GWT hack. This adds sources, .gwt.xml files etc to jar from source directory. 
-                Not quite maven convention but easieast to setup this way. -->
+                Not quite maven convention but easieast to setup this way.  -->
                 <directory>src/main/java</directory>
             </resource>
         </resources>

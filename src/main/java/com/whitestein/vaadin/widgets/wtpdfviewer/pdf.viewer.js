@@ -15,8 +15,11 @@
  */
 
 lsps = typeof lsps == "undefined" ? {} : lsps;
+
 lsps.widgets = lsps.widgets || {};
+
 lsps.widgets.wtPdfViewerFactory = function wtPdfViewerFactory() {
+
 	return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -1242,7 +1245,7 @@ var DefaultExernalServices = {
 };
 var PDFViewerApplication = {
   isActivated: true,
-  initialBookmark: document.location.hash.substring(1),
+  initialBookmark: null,
   initialDestination: null,
   initialized: false,
   fellback: false,
