@@ -912,6 +912,8 @@ public class WTPdfViewerWidget extends HTML {
 			progressBar: this.@com.whitestein.vaadin.widgets.wtpdfviewer.client.WTPdfViewerWidget::progress,
 			progressBarOwner: this.@com.whitestein.vaadin.widgets.wtpdfviewer.client.WTPdfViewerWidget::root,
 			printContainer: this.@com.whitestein.vaadin.widgets.wtpdfviewer.client.WTPdfViewerWidget::printContainer,
+			
+			// note that openFileInputName field is not used anymore, both menu item and event handler were removed
 			openFileInputName: 'fileInput',
 			debuggerScriptPath: './debugger.js',
 			defaultUrl: '',

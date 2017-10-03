@@ -190,7 +190,7 @@
                     <strict>true</strict>
            </configuration>
                 <executions>
-                    <execution>
+                    <execution> 
                         <id>testwidgetset</id>
                         <phase>test-compile</phase>
                         <goals>
