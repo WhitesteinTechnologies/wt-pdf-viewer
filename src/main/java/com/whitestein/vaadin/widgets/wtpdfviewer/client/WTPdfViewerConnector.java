@@ -9,6 +9,7 @@ import com.whitestein.vaadin.widgets.wtpdfviewer.WTPdfViewer;
 // Connector binds client-side widget class to server-side component class
 // Connector lives in the client and the @Connect annotation specifies the
 // corresponding server-side component
+@SuppressWarnings("serial")
 @Connect(WTPdfViewer.class)
 public class WTPdfViewerConnector extends AbstractComponentConnector {
 
@@ -45,6 +46,12 @@ public class WTPdfViewerConnector extends AbstractComponentConnector {
 			public void setPage(int page) {
 				getWidget().setPage(page);
 			}
+			
+			@Override
+			public void setShowPreviousViewOnLoad(boolean showPreviousViewOnLoad) {
+				getWidget().setShowPreviousViewOnLoad(showPreviousViewOnLoad);
+			}
+			
 
 		});
 	}

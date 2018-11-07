@@ -971,4 +971,10 @@ public class WTPdfViewerWidget extends HTML {
 	  pdfApplication.webViewerPageNumberChanged({value: page});
 	}-*/;
 
+	public native void setShowPreviousViewOnLoad(boolean showPreviousViewOnLoad) 
+	/*-{
+	  var pdfApplication = this.@com.whitestein.vaadin.widgets.wtpdfviewer.client.WTPdfViewerWidget::pdfApplication;
+	  pdfApplication.webViewerPreferences({showPreviousViewOnLoad: showPreviousViewOnLoad});
+	}-*/;
+	
 }

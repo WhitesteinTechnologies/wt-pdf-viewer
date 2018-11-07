@@ -15,4 +15,6 @@ public interface WTPdfViewerClientRpc extends ClientRpc {
 	public void previousPage();
 
 	public void setPage(int page);
+
+	public void setShowPreviousViewOnLoad(boolean showPreviousViewOnLoad);
 }

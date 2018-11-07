@@ -57,4 +57,9 @@ public class WTPdfViewer extends com.vaadin.ui.AbstractComponent {
 		WTPdfViewerClientRpc proxy = getRpcProxy(WTPdfViewerClientRpc.class);
 		proxy.setPage(page);
 	}
+	
+	public void setShowPreviousViewOnLoad(boolean showPreviousViewOnLoad) {
+		WTPdfViewerClientRpc proxy = getRpcProxy(WTPdfViewerClientRpc.class);
+		proxy.setShowPreviousViewOnLoad(showPreviousViewOnLoad);
+	}
 }
