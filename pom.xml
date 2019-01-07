@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.whitestein.vaadin.widgets</groupId>
     <artifactId>wt-pdf-viewer</artifactId>
-    <version>1.0.7-SNAPSHOT</version>
+    <version>1.0.7</version>
     <packaging>bundle</packaging>
     <name>WT PDF Viewer</name>
     <description>PDF viewer component for Vaadin applications based on pdf.js web viewer. Features:
@@ -39,7 +39,7 @@
         <url>https://github.com/WhitesteinTechnologies/wt-pdf-viewer</url>
         <connection>scm:git:https://github.com/WhitesteinTechnologies/wt-pdf-viewer.git</connection>
         <developerConnection>scm:git:https://github.com/WhitesteinTechnologies/wt-pdf-viewer.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>wt-pdf-viewer-1.0.7</tag>
   </scm>
     <issueManagement>
         <system>GitHub</system>
