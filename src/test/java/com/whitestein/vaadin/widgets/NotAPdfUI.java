@@ -7,7 +7,6 @@ import java.io.InputStream;
 
 import org.vaadin.addonhelpers.AbstractTest;
 
-import com.vaadin.annotations.StyleSheet;
 import com.vaadin.server.StreamResource;
 import com.vaadin.server.StreamResource.StreamSource;
 import com.vaadin.ui.Component;
@@ -19,7 +18,7 @@ import com.whitestein.vaadin.widgets.wtpdfviewer.WTPdfViewer;
  * and also make them dynamic if needed.
  */
 @SuppressWarnings("serial")
-public class BasicMyComponentUsageUI extends AbstractTest {
+public class NotAPdfUI extends AbstractTest {
 
   @Override
   public Component getTestComponent() {
@@ -27,7 +26,7 @@ public class BasicMyComponentUsageUI extends AbstractTest {
     clearableTextBox.setHeight("600px");
     clearableTextBox.setWidth("600px");
 
-    clearableTextBox.setResource(createPdfFileSource("src\\test\\resources\\pdf\\ascii-two-pages.pdf"));
+    clearableTextBox.setResource(createPdfFileSource("src\\test\\resources\\pdf\\this-is-not-pdf.txt"));
     return clearableTextBox;
   }
 
@@ -51,10 +50,4 @@ public class BasicMyComponentUsageUI extends AbstractTest {
     return new StreamResource(source, "chacha");
 
   }
-}
-
-@SuppressWarnings("serial")
-@StyleSheet("vaadin://themes/wtpdfviewer.css")
-class TestWTPdfViewer extends WTPdfViewer {
-
 }

@@ -54,6 +54,8 @@ public class WTPdfViewerConnector extends AbstractComponentConnector {
 			
 
 		});
+		
+		getWidget().setErrorListener(error -> rpc.onError(error));
 	}
 
 	// We must implement getWidget() to cast to correct type 

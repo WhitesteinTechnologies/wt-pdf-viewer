@@ -121,6 +121,8 @@ public class WTPdfViewerWidget extends HTML {
 	// pdf about to be printed goes here
 	private DivElement printContainer;
 
+  private PdfViewerWidgetErrorListener errorListener;
+
 	public WTPdfViewerWidget() {
 		Document document = Document.get();
 		root = document.createDivElement();
@@ -929,15 +931,27 @@ public class WTPdfViewerWidget extends HTML {
 		loadResourcePdf(fileName);
 	}
 
+	public void setErrorListener(PdfViewerWidgetErrorListener errorListener) {
+	  this.errorListener = errorListener;
+	}  
+	
+    public void onClientSideError(String error) {
+      //getRpcProxy(TriStateCheckBoxV8ServerRpc.class).setValue(value);
+      if (errorListener!=null)
+        errorListener.onError(error);
+    }
+     
 	public native void loadResourcePdf(String fileName)
 	/*-{
 	  var fileName = this.@com.whitestein.vaadin.widgets.wtpdfviewer.client.WTPdfViewerWidget::fileName;
 	  if (!fileName) {
 	    return ;
 	  }
-	
+	  var self = this;
 	  var pdfApplication = this.@com.whitestein.vaadin.widgets.wtpdfviewer.client.WTPdfViewerWidget::pdfApplication;
-	  pdfApplication.webViewerOpenFileViaURL(fileName);
+	  pdfApplication.webViewerOpenFileViaURL(fileName, function(error) {
+        self.@com.whitestein.vaadin.widgets.wtpdfviewer.client.WTPdfViewerWidget::onClientSideError(Ljava/lang/String;)(error);
+	  });
 	  pdfApplication.webViewerFirstPage();
 	}-*/;
 
@@ -977,4 +991,9 @@ public class WTPdfViewerWidget extends HTML {
 	  pdfApplication.webViewerPreferences({showPreviousViewOnLoad: showPreviousViewOnLoad});
 	}-*/;
 	
+	
+	@FunctionalInterface
+	public interface PdfViewerWidgetErrorListener {
+	  public void onError(String error);
+	}
 }

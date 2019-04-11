@@ -1,0 +1,6 @@
+// this is copied into the target and built there
+@import "wtpdfviewer.scss";
+
+.v-app {
+	@include wtpdfviewer;
+}

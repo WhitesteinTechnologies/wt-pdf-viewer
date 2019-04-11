@@ -11,6 +11,8 @@ public class Server extends TServer {
     
     public static void main(String... args) throws Exception {
         new Server().startServer();
+        
+        System.out.println("Running on: http://localhost:9998/");
     }
 
 }
