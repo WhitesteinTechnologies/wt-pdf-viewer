@@ -950,7 +950,7 @@ public class WTPdfViewerWidget extends HTML {
 	  var self = this;
 	  var pdfApplication = this.@com.whitestein.vaadin.widgets.wtpdfviewer.client.WTPdfViewerWidget::pdfApplication;
 	  pdfApplication.webViewerOpenFileViaURL(fileName, function(error) {
-        self.@com.whitestein.vaadin.widgets.wtpdfviewer.client.WTPdfViewerWidget::onClientSideError(Ljava/lang/String;)(error);
+        self.@com.whitestein.vaadin.widgets.wtpdfviewer.client.WTPdfViewerWidget::onClientSideError(Ljava/lang/String;)(error == null ? "null" : error.message);
 	  });
 	  pdfApplication.webViewerFirstPage();
 	}-*/;
